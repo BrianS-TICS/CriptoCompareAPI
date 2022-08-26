@@ -16,7 +16,7 @@ const Imagen = styled.img`
 `
 
 const Texto = styled.p`
-    font-size: 20px;
+    font-size: 18px;
 
     span{
         font-weight: 700;
@@ -32,7 +32,7 @@ const Precio = styled.p`
 `
 
 const Resultado = ({ resultado }) => {
-    const { PRICE, HIGHDAY, LOWDAY, CHANGEPCT24HOUR, IMAGEURL, LASUPDATE } = resultado;
+    const { PRICE, HIGHDAY, LOWDAY, CHANGEPCT24HOUR, IMAGEURL, LASTUPDATE } = resultado;
     return (
         <Presentacion>
             <Imagen 
@@ -44,7 +44,7 @@ const Resultado = ({ resultado }) => {
                 <Texto>Precio más alto del dia: <span>{HIGHDAY}</span></Texto>
                 <Texto>Precio más basico del dia: <span>{LOWDAY}</span></Texto>
                 <Texto>Variación ultimas 24 horas: <span>{CHANGEPCT24HOUR}</span></Texto>
-                <Texto>Última actualizacion: <span>{LASUPDATE}</span></Texto>
+                <Texto>Última actualizacion: <span>{LASTUPDATE}</span></Texto>
             </div>
         </Presentacion>
     )
